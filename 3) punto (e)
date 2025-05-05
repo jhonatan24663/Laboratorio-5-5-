@@ -1,0 +1,8 @@
+producto = 1
+numero = int(input("Ingresá un número positivo (negativo para terminar): "))
+
+while numero >= 0:
+    producto *= numero
+    numero = int(input("Ingresá otro número: "))
+
+print("El producto total es:", producto)
