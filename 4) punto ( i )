@@ -1,0 +1,18 @@
+import random
+import time
+
+numeros = [random.randint(1, 9) for _ in range(5)]
+print("Memorizá estos números:")
+print(numeros)
+time.sleep(3)
+print("\n" * 50)
+
+respuesta = []
+for i in range(len(numeros)):
+    n = int(input(f"Ingresá el número #{i+1}: "))
+    respuesta.append(n)
+
+if respuesta == numeros:
+    print("¡Ganaste! Memoria perfecta.")
+else:
+    print("Perdiste. Los números eran:", numeros)
