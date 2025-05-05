@@ -1,0 +1,16 @@
+import random
+
+opciones = ["piedra", "papel", "tijeras"]
+usuario = input("Elegí: piedra, papel o tijeras: ").lower()
+pc = random.choice(opciones)
+
+print("Computadora eligió:", pc)
+
+if usuario == pc:
+    print("Empate.")
+elif (usuario == "piedra" and pc == "tijeras") or \
+     (usuario == "papel" and pc == "piedra") or \
+     (usuario == "tijeras" and pc == "papel"):
+    print("¡Ganaste!")
+else:
+    print("Perdiste.")
