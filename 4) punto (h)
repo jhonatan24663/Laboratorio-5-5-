@@ -1,0 +1,17 @@
+import random
+
+palabra = random.choice(["python", "teclado", "pantalla"])
+adivinada = ["_" for _ in palabra]
+
+while "_" in adivinada:
+    print("Palabra:", " ".join(adivinada))
+    letra = input("Ingresá una letra: ")
+
+    if letra in palabra:
+        for i in range(len(palabra)):
+            if palabra[i] == letra:
+                adivinada[i] = letra
+    else:
+        print("Letra incorrecta.")
+
+print("¡Ganaste! La palabra era:", palabra)
