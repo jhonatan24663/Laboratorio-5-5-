@@ -1,0 +1,13 @@
+import random
+
+secreto = random.randint(1, 100)
+intento = int(input("Adiviná el número (1 a 100): "))
+
+while intento != secreto:
+    if intento < secreto:
+        print("Muy bajo.")
+    else:
+        print("Muy alto.")
+    intento = int(input("Intentá de nuevo :/ : "))
+
+print("¡BIEN :D !")
